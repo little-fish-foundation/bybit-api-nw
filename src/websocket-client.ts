@@ -384,7 +384,7 @@ export class WebsocketClient extends BaseWebsocketClient<
       header: {
         'X-BAPI-RECV-WINDOW': `${this.options.recvWindow}`,
         'X-BAPI-TIMESTAMP': `${Date.now()}`,
-        Referer: APIID,
+        'Referer': APIID,
       },
       op: operation,
       args: [params],

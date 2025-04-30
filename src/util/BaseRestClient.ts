@@ -322,9 +322,9 @@ export default abstract class BaseRestClient {
         if (response.status == 200) {
           const perAPIRateLimits = this.options.parseAPIRateLimits
             ? parseRateLimitHeaders(
-                response.headers,
-                this.options.throwOnFailedRateLimitParse === true,
-              )
+              response.headers,
+              this.options.throwOnFailedRateLimitParse === true,
+            )
             : undefined;
 
           return {
@@ -418,11 +418,11 @@ export default abstract class BaseRestClient {
       const signRequestParams =
         method === 'GET'
           ? serializeParams(
-              res.originalParams,
-              strictParamValidation,
-              sortProperties,
-              encodeSerialisedValues,
-            )
+            res.originalParams,
+            strictParamValidation,
+            sortProperties,
+            encodeSerialisedValues,
+          )
           : JSON.stringify(res.originalParams);
 
       const paramsStr = timestamp + key + recvWindow + signRequestParams;
