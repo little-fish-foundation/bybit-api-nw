@@ -1,23 +1,5 @@
 # Node.js & JavaScript SDK for Bybit REST API & WebSockets
 
-[![Build & Test](https://github.com/tiagosiebler/bybit-api/actions/workflows/e2etest.yml/badge.svg?branch=master)](https://github.com/tiagosiebler/bybit-api/actions/workflows/e2etest.yml)
-[![npm version](https://img.shields.io/npm/v/bybit-api)][1]
-[![npm size](https://img.shields.io/bundlephobia/min/bybit-api/latest)][1]
-[![npm downloads](https://img.shields.io/npm/dt/bybit-api)][1]
-[![last commit](https://img.shields.io/github/last-commit/tiagosiebler/bybit-api)][1]
-[![CodeFactor](https://www.codefactor.io/repository/github/tiagosiebler/bybit-api/badge)](https://www.codefactor.io/repository/github/tiagosiebler/bybit-api)
-[![Telegram](https://img.shields.io/badge/chat-on%20telegram-blue.svg)](https://t.me/nodetraders)
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/bybit-api">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/tiagosiebler/bybit-api/blob/master/docs/images/logoDarkMode2.svg?raw=true#gh-dark-mode-only">
-      <img alt="SDK Logo" src="https://github.com/tiagosiebler/bybit-api/blob/master/docs/images/logoBrightMode2.svg?raw=true#gh-light-mode-only">
-    </picture>
-  </a>
-</p>
-
-[1]: https://www.npmjs.com/package/bybit-api
 
 Professional Node.js, JavaScript & TypeScript SDK for the Bybit REST APIs and WebSockets:
 
@@ -81,35 +63,13 @@ Professional Node.js, JavaScript & TypeScript SDK for the Bybit REST APIs and We
 
 ## Installation
 
-`npm install --save bybit-api`
+`npm install --save bybit-api-nw`
 
 ## Issues & Discussion
 
-- Issues? Check the [issues tab](https://github.com/tiagosiebler/bybit-api/issues).
+- Issues? Check the [issues tab](https://github.com/tiagosiebler/bybit-api-nw/issues).
 - Discuss & collaborate with other node devs? Join our [Node.js Algo Traders](https://t.me/nodetraders) engineering community on telegram.
 - Follow our announcement channel for real-time updates on [X/Twitter](https://x.com/QuantSDKs)
-
-<!-- template_related_projects -->
-
-## Related projects
-
-Check out my related JavaScript/TypeScript/Node.js projects:
-
-- Try my REST API & WebSocket SDKs:
-  - [Bybit-api Node.js SDK](https://www.npmjs.com/package/bybit-api)
-  - [Okx-api Node.js SDK](https://www.npmjs.com/package/okx-api)
-  - [Binance Node.js SDK](https://www.npmjs.com/package/binance)
-  - [Gateio-api Node.js SDK](https://www.npmjs.com/package/gateio-api)
-  - [Bitget-api Node.js SDK](https://www.npmjs.com/package/bitget-api)
-  - [Kucoin-api Node.js SDK](https://www.npmjs.com/package/kucoin-api)
-  - [Coinbase-api Node.js SDK](https://www.npmjs.com/package/coinbase-api)
-  - [Bitmart-api Node.js SDK](https://www.npmjs.com/package/bitmart-api)
-- Try my misc utilities:
-  - [OrderBooks Node.js](https://www.npmjs.com/package/orderbooks)
-  - [Crypto Exchange Account State Cache](https://www.npmjs.com/package/accountstate)
-- Check out my examples:
-  - [awesome-crypto-examples Node.js](https://github.com/tiagosiebler/awesome-crypto-examples)
-  <!-- template_related_projects_end -->
 
 ## Documentation
 
@@ -117,7 +77,7 @@ Most methods accept JS objects. These can be populated using parameters specifie
 
 - [Bybit API Docs](https://bybit-exchange.github.io/docs/v5/intro)
 - [REST Endpoint Function List](./docs/endpointFunctionList.md)
-- [TSDoc Documentation (generated using typedoc via npm module)](https://tsdocs.dev/docs/bybit-api)
+- [TSDoc Documentation (generated using typedoc via npm module)](https://tsdocs.dev/docs/bybit-api-nw)
 
 ## Structure
 
@@ -131,29 +91,6 @@ The SDK is written in TypeScript, but fully compatible with both TypeScript and 
 
 ---
 
-## Examples
-
-Examples for using each client can be found in:
-
-- the [examples](./examples) folder.
-- the [awesome-crypto-examples](https://github.com/tiagosiebler/awesome-crypto-examples) repository.
-
-If you're missing an example, you're welcome to request one. Priority will be given to [github sponsors](https://github.com/sponsors/tiagosiebler).
-
-## API Clients
-
-You should be using the V5 APIs. If you aren't, you should upgrade your project to use the V5 APIs as soon as possible. Bybit used to have several API groups (originally one per product), but the V5 API is currently the latest standard.
-
-Refer to the [V5 interface mapping page](https://bybit-exchange.github.io/docs/v5/intro#v5-and-v3-interface-mapping-list) for more information on which V5 endpoints can be used instead of previous V3 endpoints. To learn more about the V5 API, please read the [V5 upgrade guideline](https://bybit-exchange.github.io/docs/v5/upgrade-guide).
-
-Here are the available REST clients and the corresponding API groups described in the documentation:
-
-|                         Class                          |                                                                                                      Description                       |
-| :----------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------: |
-|                     [ **V5 API** ]                     | The new unified V5 APIs (successor to previously fragmented APIs for all API groups).                                                  |
-|         [RestClientV5](src/rest-client-v5.ts)          |   Unified V5 all-in-one REST client for all [V5 REST APIs](https://bybit-exchange.github.io/docs/v5/intro)                             |
-|       [WebsocketClient](src/websocket-client.ts)       |   All WebSocket features (Public & Private consumers for all API categories & the WebSocket API)                                       |
-
 
 ## REST API Usage
 
@@ -166,9 +103,9 @@ Create API credentials on Bybit's website:
 The following is a minimal example for using the REST clients included with this SDK. For more detailed examples, refer to the [examples](./examples/) folder in the repository on GitHub:
 
 ```typescript
-const { RestClientV5 } = require('bybit-api');
+const { RestClientV5 } = require('bybit-api-nw');
 // or
-// import { RestClientV5 } from 'bybit-api';
+// import { RestClientV5 } from 'bybit-api-nw';
 
 const restClientOptions = {
   /** Your API key */
@@ -195,7 +132,7 @@ const restClientOptions = {
 
   /**
    * Enable keep alive for REST API requests (via axios).
-   * See: https://github.com/tiagosiebler/bybit-api/issues/368
+   * See: https://github.com/tiagosiebler/bybit-api-nw/issues/368
    */
   // keepAlive: true,
 
@@ -270,9 +207,9 @@ The WebsocketClient will automatically use the latest V5 WebSocket endpoints by 
 Here's a minimal example for using the websocket client. For more complete examples, look into the ws-\* examples in the [examples](./examples/) folder in the repo on GitHub.
 
 ```javascript
-const { WebsocketClient } = require('bybit-api');
+const { WebsocketClient } = require('bybit-api-nw');
 // or
-// import { WebsocketClient } from 'bybit-api';
+// import { WebsocketClient } from 'bybit-api-nw';
 
 const API_KEY = 'xxx';
 const PRIVATE_KEY = 'yyy';
@@ -420,10 +357,10 @@ There are two ways to use the WS API, depending on individual preference:
 The below example demonstrates the promise-driven approach, which behaves similar to a REST API. The WebSocket API even accepts the same parameters as the corresponding REST API endpoints, so this approach should be compatible with existing REST implementations. Connectivity, authentication, and processing requests wrapped in promises - these are all handled automatically by the WebsocketClient without additional configuration.
 
 ```javascript
-const { WS_KEY_MAP, WebsocketClient } = require('bybit-api');
+const { WS_KEY_MAP, WebsocketClient } = require('bybit-api-nw');
 
 // or
-// import { WS_KEY_MAP, WebsocketClient } from 'bybit-api';
+// import { WS_KEY_MAP, WebsocketClient } from 'bybit-api-nw';
 
 // Create an instance of the WebsocketClient.
 // This will automatically handle connectivity and authentication for you.
@@ -515,7 +452,7 @@ Important: do not subscribe to the same topics on both clients or you will recei
 Pass a custom logger (or mutate the imported DefaultLogger class) which supports the log methods `trace`, `info` and `error`, or override methods from the default logger as desired, as in the example below:
 
 ```javascript
-const { WebsocketClient, DefaultLogger } = require('bybit-api');
+const { WebsocketClient, DefaultLogger } = require('bybit-api-nw');
 
 // Enable all logging on the trace level (disabled by default)
 const customLogger = {
@@ -568,29 +505,6 @@ Build a bundle using webpack:
 The bundle can be found in `dist/`. Altough usage should be largely consistent, smaller differences will exist. Documentation is still TODO - contributions welcome.
 
 ---
+npm login --registry=https://registry.npmjs.org/
 
-<!-- template_contributions -->
-
-### Contributions & Thanks
-
-Have my projects helped you? Share the love, there are many ways you can show your thanks:
-
-- Star & share my projects.
-- Are my projects useful? Sponsor me on Github and support my effort to maintain & improve them: https://github.com/sponsors/tiagosiebler
-- Have an interesting project? Get in touch & invite me to it.
-- Or buy me all the coffee:
-  - ETH(ERC20): `0xA3Bda8BecaB4DCdA539Dc16F9C54a592553Be06C` <!-- metamask -->
-
-<!-- template_contributions_end -->
-
-### Contributions & Pull Requests
-
-Contributions are encouraged, I will review any incoming pull requests. See the issues tab for todo items.
-
-<!-- template_star_history -->
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=tiagosiebler/bybit-api,tiagosiebler/okx-api,tiagosiebler/binance,tiagosiebler/bitget-api,tiagosiebler/bitmart-api,tiagosiebler/gateio-api,tiagosiebler/kucoin-api,tiagosiebler/coinbase-api,tiagosiebler/orderbooks,tiagosiebler/accountstate,tiagosiebler/awesome-crypto-examples&type=Date)](https://star-history.com/#tiagosiebler/bybit-api&tiagosiebler/okx-api&tiagosiebler/binance&tiagosiebler/bitget-api&tiagosiebler/bitmart-api&tiagosiebler/gateio-api&tiagosiebler/kucoin-api&tiagosiebler/coinbase-api&tiagosiebler/orderbooks&tiagosiebler/accountstate&tiagosiebler/awesome-crypto-examples&Date)
-
-<!-- template_star_history_end -->
+npm publish --registry=https://registry.npmjs.org/
